@@ -8,16 +8,17 @@ A [Homebrew tap] for various personal projects.
 
 Tap this repository:
 
-    ```sh
-    brew tap mdzhang/formulae
-    ```
+  ```sh
+  brew tap mdzhang/formulae
+  ```
 
 
 Install packages:
 
-    ```sh
-    # None yet!
-    ```
+  ```sh
+  # None yet!
+  ```
+
 
 ## Authors
 
