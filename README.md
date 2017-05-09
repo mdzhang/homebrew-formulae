@@ -12,13 +12,11 @@ Tap this repository:
   brew tap mdzhang/formulae
   ```
 
-
 Install packages:
 
   ```sh
   # None yet!
   ```
-
 
 ## Authors
 
