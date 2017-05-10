@@ -8,8 +8,13 @@ class Dotfiles < Formula
 
   depends_on 'thoughtbot/formulae/rcm'
 
+  head 'https://github.com/mdzhang/dotfiles.git'
+
+  bottle :unneeded
+
   def install
-    system "env", "RCRC=#{prefix}/rcrc", "rcup"
+    prefix.install Dir["*"]
+    system "env", "RCRC=#{prefix}/rcrc", "DOT_PATH=#{prefix}", "rcup"
   end
 
   test do
