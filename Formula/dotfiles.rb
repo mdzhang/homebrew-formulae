@@ -3,8 +3,8 @@ require 'formula'
 class Dotfiles < Formula
   desc 'mdzhang dotfiles'
   homepage 'https://github.com/mdzhang/dotfiles/'
-  url 'https://github.com/mdzhang/dotfiles/archive/v0.0.1-alpha.tar.gz'
-  sha256 '510a1bb480862a73c9a1ea98f521ef11d5dd8fbdfe9feb73f8bd237ebaba5af8'
+  url 'https://github.com/mdzhang/dotfiles/archive/v0.0.1-gamma.tar.gz'
+  sha256 '3c02f3765a446fd718acdabe73ca1e77e0a3539bae9f755dc54c858dfa2e6292'
 
   depends_on 'thoughtbot/formulae/rcm'
 
