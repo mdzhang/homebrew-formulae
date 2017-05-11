@@ -7,6 +7,7 @@ class Dotfiles < Formula
   sha256 '3c02f3765a446fd718acdabe73ca1e77e0a3539bae9f755dc54c858dfa2e6292'
 
   depends_on 'thoughtbot/formulae/rcm'
+  depends_on 'duti'
 
   head 'https://github.com/mdzhang/dotfiles.git'
 
@@ -14,10 +15,18 @@ class Dotfiles < Formula
 
   def install
     prefix.install Dir["*"]
-    system "env", "RCRC=#{prefix}/rcrc", "DOT_PATH=#{prefix}", "rcup"
+  end
+
+  def caveats; <<-EOS.undent
+    If using bash, run:
+      env RCRC=#{prefix}/rcrc DOT_PATH=#{prefix} rcup
+      source ~/.bash_profile
+
+    Remember to run `rcdn` before attempting to uninstall this formula
+    EOS
   end
 
   test do
-    system "bash", "-c" "\"if [ -z ${RCRC} ]; then false; else true; fi\""
+    system true
   end
 end
